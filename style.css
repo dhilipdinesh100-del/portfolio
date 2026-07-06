@@ -69,15 +69,16 @@ nav ul li a:hover{
 
 /* Hero */
 .hero{
-    min-height:100vh;
+  
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:120px 8%;
+    padding:120px 8% 60px;
 }
 
 .hero-text{
-    width:50%;
+    flex:1;
+    max-width: 600px;
 }
 
 .hello{
@@ -98,7 +99,7 @@ nav ul li a:hover{
 
 .role{
     display:inline-block;
-    margin-top:25px;
+    margin:20px auto;
     padding:12px 25px;
     border:2px solid #7CFC00;
     border-radius:40px;
@@ -167,7 +168,7 @@ nav ul li a:hover{
 }
 
 .hero-image{
-    width:45%;
+    flex:1;
     display:flex;
     justify-content:center;
 }
@@ -187,40 +188,108 @@ nav ul li a:hover{
     border-radius:50%;
     object-fit:cover;
 }
-/* Responsive */
+/* ================= MOBILE RESPONSIVE ================= */
 
-@media(max-width:900px){
+@media (max-width:992px){
 
-nav ul{
-display:none;
+    nav{
+        padding:18px 5%;
+    }
+
+    nav ul{
+        display:none;
+    }
+
+    .resume-btn{
+        display:none;
+    }
+
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+        gap:50px;
+        padding:120px 5% 60px;
+    }
+
+    .hero-text,
+    .hero-image{
+        width:100%;
+    }
+
+    .circle{
+        width:300px;
+        height:300px;
+        margin:auto;
+    }
+
+    .hero h1{
+        font-size:55px;
+        line-height:65px;
+    }
+
+    .role{
+        font-size:18px;
+        padding:10px 20px;
+    }
+
+    .hero-desc{
+        max-width:100%;
+        margin:25px auto;
+    }
+
+    .hero-buttons{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:15px;
+    }
+    .hero-buttons a{
+        width:100%;
+        max-width:250px;
+    }
+
+    .hero-social{
+        justify-content:center;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+        gap:40px;
+        text-align:center;
+    }
+
+    .about-left p{
+        text-align:center;
+    }
+
+    .about-right{
+        grid-template-columns:1fr;
+    }
+
+    .edu-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .edu-content{
+        text-align:center;
+    }
+
+    .projects-container{
+        grid-template-columns:1fr;
+    }
+
+    .contact-info{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    form{
+        width:100%;
+    }
+
 }
 
-.hero{
-flex-direction:column-reverse;
-text-align:center;
-padding-top:140px;
-}
-
-.hero-text{
-width:100%;
-}
-
-.hero-image img{
-width:280px;
-margin-bottom:40px;
-}
-
-.hero-text h1{
-font-size:50px;
-line-height:60px;
-}
-
-.buttons{
-flex-direction:column;
-align-items:center;
-}
-
-}
 /* ================= ABOUT ================= */
 
 .about{
@@ -545,8 +614,8 @@ form button:hover{
 
 .projects-container{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:35px;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
 }
 
 .project-card{
@@ -711,4 +780,139 @@ footer p{
     border-color:#7CFC00;
     box-shadow:0 8px 20px rgba(124,252,0,.18);
     transition:.3s ease;
+}
+@media (max-width:768px){
+
+    nav{
+        padding:15px 5%;
+    }
+
+    nav ul,
+    .resume-btn{
+        display:none;
+    }
+
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+        padding:110px 5% 60px;
+        gap:40px;
+    }
+
+    .hero-text,
+    .hero-image{
+        width:100%;
+    }
+
+    .hero h1{
+        font-size:42px;
+        line-height:50px;
+    }
+
+    .hello{
+        font-size:20px;
+    }
+
+    .role{
+        font-size:16px;
+        padding:10px 18px;
+    }
+
+    .hero-desc{
+        font-size:15px;
+        max-width:100%;
+    }
+
+    .circle{
+        width:230px;
+        height:230px;
+        margin:auto;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero-buttons a{
+        width:220px;
+    }
+
+    .hero-social{
+        justify-content:center;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+        padding:70px 5%;
+        text-align:center;
+    }
+
+    .about-right{
+        grid-template-columns:1fr;
+    }
+
+    .education,
+    .skills,
+    .projects,
+    .contact{
+        padding:70px 5%;
+    }
+
+    .edu-card{
+        width:100%;
+        flex-direction:column;
+        text-align:center;
+        padding:25px;
+    }
+    .edu-content{
+        flex:1;
+        min-width:0;
+    }
+
+    .edu-icon{
+        margin:auto;
+    }
+
+    .edu-content{
+        text-align:center;
+    }
+
+    .edu-content h3{
+        font-size:24px;
+    }
+
+    .skills-container{
+        grid-template-columns:1fr;
+    }
+
+    .projects-container{
+        grid-template-columns:1fr;
+    }
+
+    .project-card{
+        width:100%;
+        padding:25px;
+    }
+
+    .project-buttons{
+        flex-direction:column;
+    }
+
+    .contact-info{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .contact-box{
+        width:100%;
+    }
+
+    form{
+        width:100%;
+    }
+
+    footer{
+        padding:40px 5%;
+    }
 }
