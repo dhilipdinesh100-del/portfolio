@@ -560,6 +560,52 @@ nav ul li a:hover{
     color:#ccc;
     word-break:break-word;
 }
+/* Desktop Layout */
+@media (min-width: 768px) {
+
+    .contact-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 50px;
+    }
+
+    .contact-info{
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contact-form{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #contact-form input,
+    #contact-form textarea{
+        width: 100%;
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid #444;
+        background: #1b1b1b;
+        color: white;
+        font-size: 16px;
+    }
+
+    #contact-form button{
+        width: 180px;
+        padding: 14px;
+        background: #7CFC00;
+        color: black;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+}
 form{
    
     width:100%;
