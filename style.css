@@ -516,20 +516,16 @@ nav ul li a:hover{
 }
 
 .contact-container{
-    width:100%;
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content:center;
-    gap:50px;
+    gap:40px;
 }
 
 .contact-info{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:stretch;
-    flex-wrap:wrap;
+    
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
     gap:25px;
 }
 
